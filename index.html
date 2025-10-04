@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,17 @@
     <div class="title-text">
       <h1>University of Frontier Technology, Bangladesh</h1>
       <h2>Department of Software Engineering</h2>
-      <h3>Faculty of Software and Machine Intelligence Engineering</h3>
-      <h4>Session: 2023-24 (L-1 T-2)</h4>
+      <h5>Faculty of Software and Machine Intelligence Engineering</h5>
     </div>
   </div>
+
   <div class="form-container">
+    <label for="semester">Semester নির্বাচন করুন:</label>
+    <select id="semester" onchange="updateTimeOptions()">
+      <option value="L-1 T-1">Level-1 Term-1</option>
+      <option value="L-1 T-2">Level-1 Term-2</option>
+    </select>
+
     <label for="day">দিন নির্বাচন করুন:</label>
     <select id="day">
       <option value="saturday">Saturday</option>
@@ -25,18 +31,18 @@
       <option value="tuesday">Tuesday</option>
       <option value="wednesday">Wednesday</option>
     </select>
+
     <label for="time">সময় নির্বাচন করুন:</label>
-    <select id="time">
-      <option value="8:00-10:00">8:00-10:00</option>
-      <option value="1:15-3:00">1:15-3:00</option>
-      <option value="3:10-4:55">3:10-4:55</option>
-      <option value="4:55-6:40">4:55-6:40</option>
-    </select>
-    <button onclick="showClass()"><b>দেখাও</b></button>
+    <select id="time"></select>
+
+    <button onclick="showClass()">দেখাও</button>
   </div>
+  
   <div id="result" class="result-box"></div>
 
+<div class="Copyright">
+    <p>&copy; Masfiq Rahman Misha. All rights reserved.</p>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
-
